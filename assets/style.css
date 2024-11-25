@@ -1,0 +1,238 @@
+body {
+    background-image: url('./img/hearts.svg'), 
+                      radial-gradient(50% 50% at 50% 50%, rgba(240, 215, 252, 0.349) 30%, #FFFFFF 100%), 
+                      url('assets/images/bg.jpg?v=ac560356');
+    background-size: cover, cover, cover;
+    background-repeat: no-repeat, no-repeat, no-repeat;
+    background-position: center, center, center;
+    height: 100%; 
+    margin: 0; 
+    display: flex; 
+    justify-content: center; /* Centers horizontally */ 
+    align-items: center;
+    flex-direction: column; /* to put each div down  */
+    transition: opacity 0.5s ease-out; 
+    opacity: 1;
+    transform: translate(0, 0);
+    overflow: hidden;
+}
+
+/* TRANSITION ANIMATIONS */
+body.fade-out { 
+    opacity: 0; 
+}
+body.load-in { 
+    opacity: 0; 
+    transform: translateY(20px); /* Adjust for desired effect */ 
+    transition: opacity 1s ease-in-out, transform 1s ease-in-out; 
+} 
+body.load-in.loaded { 
+    opacity: 1; 
+    transform: translateY(0); 
+}
+
+* {
+    box-sizing: border-box;
+    cursor: url(https://cur.cursors-4u.net/cursors/cur-9/cur267.cur), auto !important;
+}
+
+html {
+    height: 100vh;
+    width: 100vw;
+}
+
+@font-face { 
+    font-family: 'Kosugi Maru'; 
+    src: url('./fonts/KosugiMaru-Regular.ttf') format('truetype'); 
+}
+
+
+#main-screen {
+    display: block;
+    margin-bottom: 0;
+    width: 17rem;
+    height: 13.125rem;
+    border: 1px solid #BFBFBF;
+    border-width: 12px;
+    border-radius: 1.25rem;
+    justify-content: space-between;
+    padding: 0.375rem;
+    font-family: 'Kosugi Maru', sans-serif;
+    color: #5C5C5C;
+    font-size: 0.625rem;
+    background-color: #FFFFFF;
+}
+
+#main-container { /* just to add the scrollbar :p */
+    width: 14.75rem;
+    height: 9.125rem;
+    display: block;
+    overflow-y: auto;
+    /* border: 1px solid #BFBFBF; */
+    font-family: 'Kosugi Maru', sans-serif;
+    color: #5C5C5C;
+    font-size: 0.625rem;
+    margin: 0;
+    padding: 0;
+}
+
+.container01 {
+    display: flex; 
+    align-items: center;
+    font-family: 'Kosugi Maru', sans-serif;
+    color: #5C5C5C;
+    font-size: 0.625rem;
+}
+
+.container01 img {
+    border-radius: 50%;
+    border: 2px solid #CDC0FA;
+    width: 65px;
+    margin-right: 10px;
+    opacity: 0.95;
+}
+
+.container01 p {
+    border: 1px solid #BBACF2;
+    border-radius: 0.375rem;
+    background: rgb(217,207,254);
+    background: linear-gradient(0deg, rgba(217,207,254,1) 0%, rgba(240,215,252,1) 100%);
+    padding: 0.375rem;
+    font-size: 0.75rem;
+    text-align: justify;
+    margin: 0; /* to remove default margin */
+}
+
+.container02 {
+    align-items: center;
+    font-family: 'Kosugi Maru', sans-serif;
+    color: #5C5C5C;
+    font-size: 0.625rem;
+    margin-top: 0;
+}
+
+.container02 p {
+    border: 1px solid #BBACF2;
+    border-radius: 0.375rem;
+    background: rgb(217,207,254);
+    background: linear-gradient(0deg, rgba(217,207,254,1) 0%, rgba(240,215,252,1) 100%);
+    padding: 0.3755rem;
+    font-size: 0.75rem;
+    text-align: justify; 
+}
+
+.container02 a {
+    color: #b75ec5;
+    text-decoration: none;
+}
+.container02 a:hover{
+    text-decoration: underline;
+}
+.container03 {
+    display: flex; 
+    justify-content: flex-start; /* or flex-end or center based on your need */ 
+    gap: 0.5rem;
+    align-items: center;
+    font-family: 'Kosugi Maru', sans-serif;
+    color: #5C5C5C;
+    font-size: 0.625rem;
+    margin-top: 0.375rem
+}
+
+.container03 p {
+    border-radius: 0.375rem;
+    background: rgb(217,207,254);
+    background: linear-gradient(0deg, rgba(217,207,254,1) 0%, rgba(240,215,252,1) 100%);
+    padding: 0.375rem;
+    font-size: 1rem;
+    text-align: center;
+    margin: 0; /* to remove default margin */
+}
+
+#type-space {
+    width: calc(100% - 2px);
+    border: 1px solid #BBACF2;
+    border-radius: 0.375rem;
+    background: white;
+    padding: 0.25rem;
+    font-family: 'Kosugi Maru', sans-serif;
+    color: #B0B0B0;
+    font-size: 0.75rem;
+    text-align: left;
+}
+
+#send-space { /* button ID to next page*/
+    border: 1px solid #BBACF2;
+    border-radius: 0.375rem;
+    background: rgb(217,207,254);
+    background: linear-gradient(0deg, rgba(217,207,254,1) 0%, rgba(240,215,252,1) 100%);
+    font-family: 'Kosugi Maru', sans-serif;
+    color: #5C5C5C;
+    font-size: 0.75rem;
+    cursor: pointer;
+}
+
+#send-space:hover {
+    background: #38383848;
+    color: #FFA4D6;
+}
+#send-space a {
+    text-decoration: none;
+    color: #5C5C5C;
+}
+
+p3 {
+    align-items: center;
+    color: #fff;
+    font-family: 'Kosugi Maru', sans-serif;
+    animation:blinkingText .875s infinite;
+    margin: auto;
+}
+@keyframes blinkingText {
+    0%{ color: #fff; }
+    49%{ color: #fff; }
+    60%{ color: #b75ec5;}
+    99%{ color: #b75ec5;}
+    100%{ color: #fff; }
+}
+
+#btn-neck-pc {
+    cursor: pointer;
+    background: rgb(214,214,214);
+    background: linear-gradient(0deg, rgba(214,214,214,1) 0%, rgba(191,191,191,1) 100%);
+    margin-top: 0;
+    border-radius: 2.5rem;
+    border: 1px solid #BFBFBF;
+    width: 11rem;
+    max-height: 1rem;
+}
+
+#keyboard {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    width: 17rem;
+    padding: 0.75rem;
+    border-radius: 1.375rem;
+    border: 2px solid #BFBFBF;
+    background: rgb(255,255,255);
+    background: radial-gradient(circle, rgba(255,255,255,1) 0%, rgba(204,204,204,1) 100%);
+    margin-top: 0.75rem;
+    gap: 0.375rem; /* Add gap between flex items */
+}
+
+#keyboard p {
+    background: rgb(179,179,179);
+    background: linear-gradient(0deg, rgba(179,179,179,1) 0%, rgba(230,230,230,1) 100%);
+    font-family: 'Kosugi Maru', sans-serif;
+    color: #454545;
+    font-size: 0.75rem;
+    font-weight: 500;
+    line-height: 0.875rem; /* Set line-height close to font-size */
+    border-radius: 0.25rem;
+    padding: 3px 5px; /* Adjust padding to be smaller */
+    margin: 0; /* Remove default margins */
+}
+
+
